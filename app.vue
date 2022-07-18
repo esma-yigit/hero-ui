@@ -22,7 +22,7 @@
     </div>
     <div class="container-left">
       <div class="box-top box">
-        <img alt="armadigital-logo" class="logo" src="assets/images/logo.svg">
+        <img alt="armadigital-logo" class="logo" src="~/assets/images/logo.svg">
       </div>
       <div class="box-bottom">
         <div class="box">
@@ -96,7 +96,7 @@
     <div :class="{'top':isToggleOpen}" class="canvas-menu d-flex flex-row">
       <Transition name="canvas-left">
         <div v-if="isToggleOpen" class="left cur-close d-none d-sm-block">
-          <img alt="armadigital-logo" class="left-logo" src="assets/images/logo.svg">
+          <img alt="armadigital-logo" class="left-logo" src="~/assets/images/logo.svg">
           <div class="left-right">
             <h1 class="slogan1">digital</h1>
             <div class="slogan2">
