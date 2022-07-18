@@ -71,7 +71,8 @@ body, html {
         flex-direction: column;
         width: 40%;
         cursor: pointer;
-        transition: 0.3s ease transform;
+        transition: 0.3s ease all;
+
 
         & > span {
           background: #fff;
@@ -84,15 +85,24 @@ body, html {
         & > span:nth-of-type(1) {
           width: 60%;
 
+
         }
 
         & > span:nth-of-type(2) {
-          width: 100%;
+          width: 60%;
+
         }
 
-
-        & > span:nth-of-type(3) {
-          width: 60%;
+        & > button{
+          border: none;
+          cursor: pointer;
+          outline: none;
+          width: 100%;
+          background: #fff;
+          border-radius: 10px;
+          height: 5px;
+          margin: 5px 0;
+          transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
         }
 
@@ -156,6 +166,8 @@ body, html {
         color: #ffffff;
         font-size: 1.1rem;
         line-height: 1.3;
+        letter-spacing: 1px;
+        opacity: 0.8;
         font-family: 'SF Pro Display', sans-serif;
         font-weight: 100;
         margin-top: 1.5rem;
@@ -170,21 +182,25 @@ body, html {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 1rem;
+      padding-top: 4rem;
       margin: 0 6.87rem;
+      position: relative;
+      z-index: 50;
 
       & > .left > .text {
-        color: #ffffff;
+        color: rgba(255, 255, 255, 0.83);
         font-size: 1.4rem;
-        line-height: 1.3;
+        line-height: 1.3px;
         font-family: 'SF Pro Display', sans-serif;
         font-weight: 100;
+        letter-spacing: 1.6px;
 
       }
 
       & > .center {
         display: flex;
-
+        position: relative;
+        z-index: 60;
 
         & > .btn {
           border-radius: 50px;
@@ -195,6 +211,9 @@ body, html {
           width: 100%;
           height: 100%;
           padding: 0.3rem 1rem;
+          cursor: pointer;
+          position: relative;
+          z-index: 60;
 
           & > img {
             width: 2rem;
@@ -222,10 +241,11 @@ body, html {
           cursor: pointer;
           margin-right: 1.2rem;
           transition: all 0.3s ease-in-out;
+          padding: 0.3rem 1.05rem;
 
           &:hover {
             color: #000000;
-            background: transparent;
+            background: #272727;
             border: 1px solid #ffffff;
 
 
@@ -242,7 +262,7 @@ body, html {
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            background: linear-gradient(90deg, #438CDD 12%, #D91F96 88%);
+            background: #272727;
             color: #ffffff;
             border: none;
           }
@@ -252,14 +272,25 @@ body, html {
       }
 
       & > .right {
-        color: #1b0e4b;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 0.2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #ffffff;
+        color: #ffffff;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+        &:hover {
+          box-shadow: inset 12rem 0 0 0 #272727;
+          color: white;
+          padding: 0 0.2rem;
+        }
 
         & > img {
           width: 2rem;
           height: 2rem;
+
         }
 
         & > .text {
@@ -281,12 +312,23 @@ body, html {
   width: 7.5rem;
   height: 7.5rem;
   border-top: 1px solid #5a5b5c;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+    position: relative;
+    z-index: 50;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
   & > img {
     width: 20%;
     height: 20%;
     padding: 15rem;
+
   }
+
 }
 
 .wrapper-anim {
@@ -297,33 +339,48 @@ body, html {
   right: 7.52rem;
   height: 100%;
   overflow: hidden;
-  .plus{
+  z-index: 45;
+
+  .plus {
     width: 50%;
-    img{
+
+    img {
       position: absolute;
-      &:nth-child(1){
-        top: 25%;
+
+      &:nth-child(1) {
+        top: 27%;
         right: 40%;
         width: 4rem;
+        animation: little 10s linear infinite;
+        transition: all 0.3s linear;
       }
-      &:nth-child(2){
-        top: 30%;
+
+      &:nth-child(2) {
+        top: 35%;
         right: 35%;
-        width: 5rem;
+        width: 3rem;
+        animation: little 15s linear infinite;
+        transition: all 0.3s linear;
 
       }
-      &:nth-child(3){
-        top: 20%;
+
+      &:nth-child(3) {
+        top: 22%;
         right: 42%;
         width: 1rem;
+        animation: little 4s linear infinite;
+        transition: all 0.3s linear;
 
 
       }
-        &:nth-child(4){
-            top: 25%;
-            right: 35%;
-            width: 2rem;
-        }
+
+      &:nth-child(4) {
+        top: 26%;
+        right: 35%;
+        width: 2rem;
+        animation: little 7s linear infinite;
+        transition: all 0.3s linear;
+      }
     }
 
   }
@@ -332,13 +389,17 @@ body, html {
   .up {
     top: 20%;
     width: 40%;
-    right: 0;
+    right: -10px;
     position: absolute;
     overflow: hidden;
+    z-index: 60;
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 98%;
+      height: 98%;
+      padding: 1.2rem;
+      animation: little-up 10s linear infinite;
+      transition: all 0.3s ease-in-out;
     }
 
   }
@@ -349,11 +410,13 @@ body, html {
     bottom: 13%;
     position: absolute;
     overflow: hidden;
+    z-index: 55;
     //transition: all 1s ease-in-out;
 
     img {
       width: 100%;
       height: 100%;
+
     }
 
   }
@@ -365,6 +428,7 @@ body, html {
     left: 18%;
     top: 15%;
     overflow: hidden;
+    z-index: 55;
 
     img {
       width: 100%;
@@ -374,4 +438,248 @@ body, html {
 
 }
 
+.canvas-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: flex;
 
+
+  .left {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    &-logo{
+      width: 8rem;
+        height: 8rem;
+        &>img{
+       width: 100%;
+            height: 100%;
+      }
+    }
+    &-right{
+      display: flex;
+      flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      justify-items: start;
+      padding: 1rem;
+      .slogan1{
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.87);
+        margin-bottom: -1.7rem;
+
+
+      }
+      .slogan2{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+       .arma{
+            font-size: 5rem;
+            font-weight: 800;
+            color: #ffffff;
+         margin-right: 1rem;
+
+
+       }
+      }
+      .number{
+        font-size: 4rem;
+        font-weight: 700;
+        color: #20A7F3;
+        line-height: 0;
+        padding-top: 1rem;
+        font-family: 'Gotham Ultra', sans-serif;
+
+      }
+
+    }
+
+
+  }
+
+  .right {
+    width: 50%;
+    background-color: #2E2E2E;
+    background-image: url("~/assets/images/canvas-bg.svg");
+    background-size: cover;
+    background-position:-250px;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    z-index: 160;
+    .menu-close{
+        width: 7.5rem;
+        height: 7.5rem;
+        z-index: 150;
+      display: flex;
+      flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      &>button{
+        border: none;
+        position: relative;
+        outline: none;
+        width: 40%;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 10px;
+        height: 5px;
+        margin: 5px 0;
+        transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+      }
+    }
+    .canvas-nav {
+      justify-self: center;
+      padding-right: 2rem;
+      .navbar-nav,.dropdown-item{
+        list-style: none;
+        text-align: right;
+      .dropdown-menu{
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+        &:first-of-type{
+            margin-top: 3rem;
+        }
+
+      .dropdown-item{
+        margin-bottom: 1rem;
+        .dropdown-item-link {
+          color: #FEFEFE;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: normal;
+          transition: all 0.3s ease-in-out;
+          margin-bottom: 5rem;
+
+        }
+      }
+      }
+      .nav-link {
+        text-decoration: none;
+        font-size: 3rem;
+        color: #656565;
+        margin-bottom: 5rem;
+
+
+      }
+    }
+
+    }
+
+    .socials {
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      padding-right: 2rem;
+        .social-item {
+            margin-right: 1rem;
+          width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+          border: 1px solid #e2e2e2;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+          padding: 0.5rem;
+            cursor: pointer;
+            &:hover {
+
+              border: 1px solid #000000;
+              background-color: #fff;
+              color: #000;
+              transition: all 0.3s ease-in-out;
+              span>svg path{
+                fill: #000;
+              }
+
+            }
+            span {
+              justify-self: center;
+              align-self: center;
+            }}
+    }
+
+
+  }
+}
+
+@keyframes toggle-hover {
+  0% {
+    width: 100%
+  }
+  50% {
+    width: 50%
+  }
+  100% {
+    width: 100%
+  }
+
+}
+@keyframes little {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(10deg) scale(1.2);
+  }
+  40% {
+    transform: translateY(-10px) rotate(-15deg) scale(1);
+
+  }
+  60% {
+    transform: translateY(-5px) rotate(30deg) scale(0.9);
+
+  }
+}
+
+
+
+@keyframes little-up {
+    0% {
+        transform:  rotateZ(-3deg)  ;
+      transition: all 0.3s ease-in-out;
+    }
+    20% {
+        transform:  rotateZ(-6deg)  ;
+      transition: all 0.3s ease-in-out;
+
+    }
+    40% {
+        transform:rotateZ(-7deg)  ;
+      transition: all 0.3s ease-in-out;
+    }
+
+   60%{
+     transform:rotateZ(-6deg)   ;
+      transition: all 0.3s ease-in-out;
+   }
+    80%{
+      transform:rotateZ(-5deg)  ;
+        transition: all 0.3s ease-in-out;
+    }
+    100%{
+      transform:rotateZ(-3deg)   ;
+        transition: all 0.3s ease-in-out;
+    }
+}
