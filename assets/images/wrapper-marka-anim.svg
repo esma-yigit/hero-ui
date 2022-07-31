@@ -1,0 +1,5 @@
+<svg id="scene" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1435" height="100%" viewBox="420 51.9 1435 738" xml:space="preserve">
+                    <g class="group-element" id="sun">
+                        <image width="576" height="433"  xlink:href="@/assets/images/tiger.png" x="859" y="189.89" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px; opacity: 1;"></image>
+                    </g>
+</svg>

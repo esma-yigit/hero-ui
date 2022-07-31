@@ -1,21 +1,5 @@
-@font-face {
-  font-family:'SF Pro Display';
-  font-style:normal;
-  font-weight:900;
-  src:url("../SF-Pro-Display-Black.otf") format("otf");
-}
-@font-face {
-  font-family:'SF Pro Display';
-  font-style:oblique;
-  font-weight:100;
-  src:url("../SF-Pro-Display-UltralightItalic.otf") format("otf");
-}
-@font-face {
-  font-family:'SF Pro Display';
-  font-style:normal;
-  font-weight:500;
-  src:url("../SF-Pro-Display-Regular.otf") format("otf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 @font-face {
   font-family:'Gotham Ultra';
   font-style:normal;
@@ -23,8 +7,45 @@
   src:url("../gotham-ultra.ttf") format("truetype");
 }
 @font-face {
-  font-family:'SF Pro Display';
-  font-style:normal;
-  font-weight:600;
-  src:url("../SF-Pro-Display-Medium.otf") format("otf");
+  font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 500;
 }
+
+@font-face {
+  font-family: 'SF Pro Display Black';
+    font-style: normal;
+    font-weight: 100;
+  src: url("../SFProDisplay-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SF Pro Display Bold';
+  src: url("../SFProDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SF Pro Display Light';
+  src: url("../SFProDisplay-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SF Pro Display Medium';
+  src: url("../SFProDisplay-Medium.ttf") format("truetype");
+
+}
+@font-face {
+  font-family: 'SF Pro Display Semibold';
+  src: url("../SFProDisplay-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SF Pro Display Thin';
+  src: url("../SFProDisplay-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SF Pro Display Ultralight';
+  src: url("../SFProDisplay-Ultralight.ttf") format("truetype");
+}
+//black siradisi //64 px
+//light altindakiler  24 px 12px
+//semibold altindaki stronglar menu ana basiklae
+//bold button bold 10
+//medium menu dropdown basliklari //barlow cogu
+//3lu 19 19
