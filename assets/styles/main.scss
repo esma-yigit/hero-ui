@@ -1,9 +1,7 @@
 @import "fonts";
 @import "media";
 @import "mixins";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 body,
 html {
   height: 100%;
@@ -157,7 +155,7 @@ p {
   //  }
   //}
 }
-.container {
+.container-hero {
   width: 100vw;
   max-width: 100vw;
   min-height: 100vh;
@@ -285,7 +283,7 @@ p {
     }
   }
 }
-.container-middle {
+.container-hero-middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1105,8 +1103,10 @@ p {
     }
   }
 }
+//tab-content backgorundu duzenle
 .tab-content {
   max-height: 0;
+  background-color: #1c80cf;
   -webkit-transition: max-height 0.35s;
   -o-transition: max-height 0.35s;
   transition: max-height 0.35s;
@@ -1118,11 +1118,12 @@ p {
 /* Label formatting when open */
 .tab input:checked + label {
   /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
-  font-size: 1.25rem; /*.text-xl*/
+  font-size: 1.5rem; /*.text-xl*/
   padding: 1.25rem; /*.p-5*/
 
-  background-color: #f8fafc; /*.bg-gray-100 */
+  background-color: #ffffff; /*.bg-gray-100 */
 }
+
 /* Icon */
 .tab label::after {
   float: right;
@@ -1132,7 +1133,7 @@ p {
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-align: center;
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;

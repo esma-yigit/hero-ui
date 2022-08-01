@@ -105,7 +105,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["~/assets/styles/main.scss"],
+  css: ["~/assets/styles/main.scss", "~/assets/styles/tailwind.css"],
 
   vite: {
     logLevel: "info",

@@ -1,12 +1,12 @@
 <template>
-  <main class="container">
+  <main class="container-hero">
     <div :class="{ top: isToggleOpen }" class="canvas-menu d-flex flex-row">
       <Transition name="canvas-left">
         <div v-if="isToggleOpen" class="left cur-close d-none d-sm-block">
           <img
             alt="armadigital-logo"
             class="left-logo"
-            src="~/assets/images/center-logo.png"
+            src="@/assets/images/center-logo.png"
           />
           <div class="left-bottom-text">
             <span class="typed">Arma Digital #360° Ajansı</span>
@@ -244,23 +244,23 @@
     </div>
 
     <NuxtLayout name="mobile" :is-hover="isHover" />
-    <div class="container-left">
+    <div class="container-hero-left">
       <div class="box-top box">
         <img
           alt="armadigital-logo"
           class="logo"
-          src="~/assets/images/logo.svg"
+          src="@/assets/images/logo.svg"
         />
       </div>
       <div class="box-bottom">
         <div class="box">
-          <img alt="" class="icon" src="~/assets/images/icon-rocket.png" />
+          <img alt="" class="icon" src="@/assets/images/icon-rocket.png" />
         </div>
         <div class="box">
-          <img alt="" class="icon" src="~/assets/images/icon-hearth.png" />
+          <img alt="" class="icon" src="@/assets/images/icon-hearth.png" />
         </div>
         <div class="box">
-          <img alt="" class="icon" src="~/assets/images/icon-arrow-top.png" />
+          <img alt="" class="icon" src="@/assets/images/icon-arrow-top.png" />
         </div>
       </div>
     </div>
@@ -278,8 +278,8 @@
       }"
     >
       <swiper-slide v-for="(slide, index) in sliders" :key="slide.id">
-        <div class="container-middle">
-          <div class="container-middle-start">
+        <div class="container-hero-middle">
+          <div class="container-hero-middle-start">
             <h1 style="margin: 0">{{ slide.header }}</h1>
           </div>
           <div class="wrapper-anim">
@@ -377,7 +377,10 @@
             <SvgIcerikYonetimi />
           </div>
 
-          <div class="container-middle-center block-effect" style="--td: 1.2s">
+          <div
+            class="container-hero-middle-center block-effect"
+            style="--td: 1.2s"
+          >
             <p class="title block-reveal" style="--bc: #438cdd; --d: 0.1s">
               {{ slide.text.first }}
             </p>
@@ -388,32 +391,32 @@
               {{ slide.text.third }}
             </p>
           </div>
-          <div class="container-middle-end">
+          <div class="container-hero-middle-end">
             <div class="left">
               <h4 class="text">#360° {{ slide.footer.text }}</h4>
             </div>
             <div class="center">
               <button class="btn btn-gradient">
-                <img alt="" src="~/assets/images/icon-search.png" />
+                <img alt="" src="@/assets/images/icon-search.png" />
                 <span class="text">Keşfedin</span>
-                <img alt="" src="~/assets/images/forward.png" />
+                <img alt="" src="@/assets/images/forward.png" />
               </button>
               <button class="btn btn-transparent">
-                <img alt="" src="~/assets/images/icon-call.png" />
+                <img alt="" src="@/assets/images/icon-call.png" />
                 <span class="text">Bilgi Alın</span>
-                <img alt="" src="~/assets/images/forward.png" />
+                <img alt="" src="@/assets/images/forward.png" />
               </button>
             </div>
             <NuxtLink class="right">
               <p class="text">Bir web sitesi ile basla</p>
-              <img alt="" src="~/assets/images/forward.png" />
+              <img alt="" src="@/assets/images/forward.png" />
             </NuxtLink>
           </div>
         </div>
       </swiper-slide>
     </swiper>
 
-    <div class="container-right">
+    <div class="container-hero-right">
       <div
         class="box-top box"
         @click="openDrawer"
@@ -432,10 +435,10 @@
       </div>
       <div class="box-bottom swiper-button-next">
         <div class="box">
-          <img alt="" class="icon" src="~/assets/images/next.png" />
+          <img alt="" class="icon" src="@/assets/images/next.png" />
         </div>
         <div class="box swiper-button-prev">
-          <img alt="" class="icon" src="~/assets/images/prev.png" />
+          <img alt="" class="icon" src="@/assets/images/prev.png" />
         </div>
       </div>
     </div>
@@ -447,7 +450,7 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Autoplay } from "swiper";
-import sliders from "~/constants/slider";
+import sliders from "@/constants/slider";
 // Import Swiper styles
 import "swiper/css";
 
