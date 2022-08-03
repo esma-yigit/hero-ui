@@ -64,7 +64,7 @@
                     class="nav-link"
                     rel="nofollow"
                     target="_self"
-                    to="/biz-kimiz"
+                    to="/hakkimizda"
                     >BİZ KİMİZ
                   </NuxtLink>
                 </li>

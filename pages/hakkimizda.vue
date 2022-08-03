@@ -1,7 +1,63 @@
 <template>
   <div></div>
   <section>
-    <div class="w-full mx-auto p-8">
+    <div class="w-full mx-auto px-48">
+      <div class="flex space-x-14">
+        <div class="w-1/2 h-full">
+          <img
+            class="object-contain w-full h-full"
+            src="@/assets/images/page-biz-kimiz-hero.png"
+            alt="biz-kimiz"
+          />
+        </div>
+        <div
+          class="w-1/2 max-h-[610px] h-full overflow-y-scroll overflow-hidden"
+        >
+          <h1 class="capitalize text-3xl font-medium mb-4">Biz Kimiz</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+            consectetur, cumque illum labore laboriosam maxime minus nulla porro
+            quam reiciendis rem rerum sequi, voluptatum. Aliquam, aspernatur,
+            ut! Dolore dolores impedit incidunt nesciunt nihil non possimus quas
+            quidem recusandae sed. Aliquam amet animi at, et facere minima nobis
+            sequi! Ad animi aut cupiditate ducimus, esse explicabo illo ipsum
+            neque provident quo? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Beatae consectetur, cumque illum labore laboriosam
+            maxime minus nulla porro quam reiciendis rem rerum sequi,
+            voluptatum. Aliquam, aspernatur, ut! Dolore dolores impedit incidunt
+            nesciunt nihil non possimus quas quidem recusandae sed. Aliquam amet
+            animi at, et facere minima nobis sequi! Ad animi aut cupiditate
+            ducimus, esse explicabo illo ipsum neque provident quo? Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Beatae consectetur,
+            cumque illum labore laboriosam maxime minus nulla porro quam
+            reiciendis rem rerum sequi, voluptatum. Aliquam, aspernatur, ut!
+            Dolore dolores impedit incidunt nesciunt nihil non possimus quas
+            quidem recusandae sed. Aliquam amet animi at, et facere minima nobis
+            sequi! Ad animi aut cupiditate ducimus, esse explicabo illo ipsum
+            neque provident quo? <br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+            consectetur, cumque illum labore laboriosam maxime minus nulla porro
+            quam reiciendis rem rerum sequi, voluptatum. Aliquam, aspernatur,
+            ut! Dolore dolores impedit incidunt nesciunt nihil non possimus quas
+            quidem recusandae sed. Aliquam amet animi at, et facere minima nobis
+            sequi! Ad animi aut cupiditate ducimus, esse explicabo illo ipsum
+            neque provident quo? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Beatae consectetur, cumque illum labore laboriosam
+            maxime minus nulla porro quam reiciendis rem rerum sequi,
+            voluptatum. Aliquam, aspernatur, ut! Dolore dolores impedit incidunt
+            nesciunt nihil non possimus quas quidem recusandae sed. Aliquam amet
+            animi at, et facere minima nobis sequi! Ad animi aut cupiditate
+            ducimus, esse explicabo illo ipsum neque provident quo? Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Beatae consectetur,
+            cumque illum labore laboriosam maxime minus nulla porro quam
+            reiciendis rem rerum sequi, voluptatum. Aliquam, aspernatur, ut!
+            Dolore dolores impedit incidunt nesciunt nihil non possimus quas
+            quidem recusandae sed. Aliquam amet animi at, et facere minima nobis
+            sequi! Ad animi aut cupiditate ducimus, esse explicabo illo ipsum
+            neque provident quo?
+          </p>
+        </div>
+      </div>
       <div>
         <div class="tab w-full overflow-hidden">
           <input
