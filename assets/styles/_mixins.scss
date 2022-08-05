@@ -3,13 +3,3 @@
     @content;
   }
 }
-
-$alternating-area: [1 / 1 / 2 / 2, 1 / 2 / 2 / 3, 2 / 1 / 3 / 2, 2 / 2 / 3 / 3,
-  3 / 1 / 4 / 2, 3 / 2 / 4 / 3];
-@mixin alternating-area {
-  @for $i from 1 through length($alternating-area) {
-    &:nth-child(#{length($alternating-area)}n + #{$i}) {
-      grid-area: (nth($alternating-area, $i));
-    }
-  }
-}

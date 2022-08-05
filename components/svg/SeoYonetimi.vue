@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative right-10">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"

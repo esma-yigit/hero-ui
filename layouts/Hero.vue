@@ -1,5 +1,5 @@
 <template>
-  <main class="container-hero">
+  <main class="container-hero bg-hero">
     <div :class="{ top: isToggleOpen }" class="canvas-menu d-flex flex-row">
       <Transition name="canvas-left">
         <div v-if="isToggleOpen" class="left cur-close d-none d-sm-block">
@@ -270,7 +270,9 @@
       :space-between="0"
       :loop="true"
       @swiper="onSwiper"
-      @slideChange="onSlideChange"
+      :mousewheel="true"
+      @slideChange="onSlideChange($event)"
+      :width="swiperWidth"
       :modules="modules"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -283,100 +285,14 @@
             <h1 style="margin: 0">{{ slide.header }}</h1>
           </div>
           <div class="wrapper-anim">
-            <!--            <svg-->
-            <!--              id="scene"-->
-            <!--              xmlns="http://www.w3.org/2000/svg"-->
-            <!--              xmlns:xlink="http://www.w3.org/1999/xlink"-->
-            <!--              viewBox="0 0 311.67624 243.664"-->
-            <!--              xml:space="preserve"-->
-            <!--              style="-->
-            <!--                background-color: #0b7ad1;-->
-            <!--                border: 1px solid #fff;-->
-            <!--                border-radius: 5px;-->
-            <!--              "-->
-            <!--            >-->
-            <!--              <g class="group-element" id="tiger">-->
-            <!--                <image-->
-            <!--                  width="756"-->
-            <!--                  height="662"-->
-            <!--                  xlink:href="@/assets/images/tiger.png"-->
-            <!--                  x="0"-->
-            <!--                  y="0"-->
-            <!--                  transform="rotateY(180deg)"-->
-            <!--                  style="transform-origin: bottom left; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="up-hand">-->
-            <!--                <image-->
-            <!--                  width="441"-->
-            <!--                  height="370"-->
-            <!--                  xlink:href="@/assets/images/up-hand.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(1,0,0,1,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="down-hand">-->
-            <!--                <image-->
-            <!--                  width="718"-->
-            <!--                  height="407"-->
-            <!--                  xlink:href="@/assets/images/down-hand.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(1,0,0,1,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="plus1">-->
-            <!--                <image-->
-            <!--                  width="576"-->
-            <!--                  height="433"-->
-            <!--                  preserveAspectRatio="none"-->
-            <!--                  xlink:href="@/assets/images/plus.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(0.1,0,0,0.1,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="plus2">-->
-            <!--                <image-->
-            <!--                  width="576"-->
-            <!--                  height="433"-->
-            <!--                  xlink:href="@/assets/images/plus.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(0.2,0,0,0.2,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="plus3">-->
-            <!--                <image-->
-            <!--                  width="576"-->
-            <!--                  height="433"-->
-            <!--                  xlink:href="@/assets/images/plus.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(0.05,0,0,0.05,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--              <g class="group-element" id="plus4">-->
-            <!--                <image-->
-            <!--                  width="576"-->
-            <!--                  height="433"-->
-            <!--                  xlink:href="@/assets/images/plus.png"-->
-            <!--                  x="859"-->
-            <!--                  y="189.89"-->
-            <!--                  transform="matrix(0.08,0,0,0.08,0,0)"-->
-            <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
-            <!--                ></image>-->
-            <!--              </g>-->
-            <!--            </svg>-->
-            <SvgIcerikYonetimi />
+            <component :is="slide.anim" />
+            <div class="relative">
+              <img
+                src="@/assets/images/hero-seo-fog.png"
+                class="w-full h-full -translate-y-12"
+              />
+            </div>
           </div>
-
           <div
             class="container-hero-middle-center block-effect"
             style="--td: 1.2s"
@@ -449,13 +365,21 @@
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay, Mousewheel } from "swiper";
 import sliders from "@/constants/slider";
 // Import Swiper styles
 import "swiper/css";
+import GoogleYonetimi from "../components/svg/GoogleYonetimi";
+import IcerikYonetimi from "../components/svg/IcerikYonetimi";
+import SeoYonetimi from "../components/svg/SeoYonetimi";
+import DigitalYonetim from "../components/svg/DigitalYonetim";
 
 export default {
   components: {
+    DigitalYonetim,
+    SeoYonetimi,
+    IcerikYonetimi,
+    GoogleYonetimi,
     Swiper,
     SwiperSlide,
   },
@@ -465,8 +389,12 @@ export default {
     };
     const isToggleOpen = useState("isToggleOpen", () => false);
     const isHover = useState("isHover", () => false);
-    const onSlideChange = () => {
-      console.log("slide change");
+    const bgHero = useState("bgHero", () => null);
+    const onSlideChange = (e) => {
+      const activeSlide = sliders.filter(
+        (slide) => sliders.indexOf(slide) === e.activeIndex
+      );
+      bgHero.value = activeSlide.bgColor;
     };
     const openDrawer = () => {
       isToggleOpen.value = !isToggleOpen.value;
@@ -475,7 +403,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
-      modules: [Navigation, Autoplay],
+      modules: [Navigation, Autoplay, Mousewheel],
       sliders,
       isHover,
       isToggleOpen,
@@ -488,16 +416,13 @@ export default {
 <style scoped>
 .block-reveal {
   --t: calc(var(--td) + var(--d));
-  color: transparent;
   position: relative;
   overflow: hidden;
-
   animation: revealBlock 0s var(--t) forwards;
 }
 
 .block-reveal::after {
   content: "";
-
   width: 0;
   height: 100%;
   position: absolute;
@@ -528,7 +453,7 @@ export default {
   }
 
   100% {
-    transform: translateX(110%);
+    transform: translateX(120%);
     filter: blur(30px);
   }
 }

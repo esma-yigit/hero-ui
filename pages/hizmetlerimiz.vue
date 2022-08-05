@@ -57,6 +57,7 @@
           </div>
         </div>
       </section>
+      <BadgeTeklifAlin class="mb-8" />
       <FooterContact />
     </template>
   </NuxtLayout>
@@ -64,6 +65,7 @@
 
 <script setup>
 import FooterContact from "../components/FooterContact";
+import BadgeTeklifAlin from "../components/BadgeTeklifAlin";
 </script>
 
 <style scoped></style>

@@ -1,3 +1,9 @@
+import SeoYonetimi from "@/components/svg/SeoYonetimi.vue";
+import SosyalMedya from "@/components/svg/SosyalMedya.vue";
+import IcerikYonetimi from "@/components/svg/IcerikYonetimi.vue";
+import DigitalYonetim from "@/components/svg/DigitalYonetim.vue";
+import GoogleYonetimi from "@/components/svg/GoogleYonetimi.vue";
+
 export default [
   {
     id: "digital_yonetim",
@@ -13,28 +19,8 @@ export default [
     footer: {
       text: "dijital yönetim",
     },
-    anim: {
-      firstImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-1.png",
-        alt: "dijital yönetim",
-        class: "first-image",
-      },
-      secondImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-2.png",
-        alt: "dijital yönetim",
-        class: "second-image",
-      },
-      thirdImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-3.png",
-        alt: "dijital yönetim",
-        class: "third-image",
-      },
-      forthImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-4.png",
-        alt: "dijital yönetim",
-        class: "forth-image",
-      },
-    },
+    anim: DigitalYonetim,
+    bgColor: "",
   },
   {
     id: "seo_yonetimi",
@@ -49,28 +35,9 @@ export default [
     footer: {
       text: "SEO yönetimi",
     },
-    anim: {
-      firstImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-1.png",
-        alt: "dijital yönetim",
-        class: "first-image",
-      },
-      secondImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-2.png",
-        alt: "dijital yönetim",
-        class: "second-image",
-      },
-      thirdImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-3.png",
-        alt: "dijital yönetim",
-        class: "third-image",
-      },
-      forthImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-4.png",
-        alt: "dijital yönetim",
-        class: "forth-image",
-      },
-    },
+    anim: SeoYonetimi,
+
+    bgColor: "",
   },
   {
     id: "google_yonetimi",
@@ -85,28 +52,8 @@ export default [
     footer: {
       text: "Google yönetimi",
     },
-    anim: {
-      firstImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-1.png",
-        alt: "dijital yönetim",
-        class: "first-image",
-      },
-      secondImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-2.png",
-        alt: "dijital yönetim",
-        class: "second-image",
-      },
-      thirdImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-3.png",
-        alt: "dijital yönetim",
-        class: "third-image",
-      },
-      forthImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-4.png",
-        alt: "dijital yönetim",
-        class: "forth-image",
-      },
-    },
+    anim: GoogleYonetimi,
+    bgColor: "",
   },
   {
     id: "sosyal_medya",
@@ -122,28 +69,9 @@ export default [
     footer: {
       text: "sosyal medya",
     },
-    anim: {
-      firstImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-1.png",
-        alt: "dijital yönetim",
-        class: "first-image",
-      },
-      secondImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-2.png",
-        alt: "dijital yönetim",
-        class: "second-image",
-      },
-      thirdImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-3.png",
-        alt: "dijital yönetim",
-        class: "third-image",
-      },
-      forthImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-4.png",
-        alt: "dijital yönetim",
-        class: "forth-image",
-      },
-    },
+    anim: SosyalMedya,
+
+    bgColor: "",
   },
   {
     id: "icerik_yonetimi",
@@ -157,27 +85,7 @@ export default [
     footer: {
       text: "İçerik yönetimi",
     },
-    anim: {
-      firstImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-1.png",
-        alt: "dijital yönetim",
-        class: "first-image",
-      },
-      secondImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-2.png",
-        alt: "dijital yönetim",
-        class: "second-image",
-      },
-      thirdImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-3.png",
-        alt: "dijital yönetim",
-        class: "third-image",
-      },
-      forthImage: {
-        src: "https://arma-digital.com/wp-content/uploads/2020/01/digital-yonetim-4.png",
-        alt: "dijital yönetim",
-        class: "forth-image",
-      },
-    },
+    anim: IcerikYonetimi,
+    bgColor: "",
   },
 ];

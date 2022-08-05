@@ -442,6 +442,98 @@
         </div>
       </div>
     </main>
+
+    <!--            <svg-->
+    <!--              id="scene"-->
+    <!--              xmlns="http://www.w3.org/2000/svg"-->
+    <!--              xmlns:xlink="http://www.w3.org/1999/xlink"-->
+    <!--              viewBox="0 0 311.67624 243.664"-->
+    <!--              xml:space="preserve"-->
+    <!--              style="-->
+    <!--                background-color: #0b7ad1;-->
+    <!--                border: 1px solid #fff;-->
+    <!--                border-radius: 5px;-->
+    <!--              "-->
+    <!--            >-->
+    <!--              <g class="group-element" id="tiger">-->
+    <!--                <image-->
+    <!--                  width="756"-->
+    <!--                  height="662"-->
+    <!--                  xlink:href="@/assets/images/tiger.png"-->
+    <!--                  x="0"-->
+    <!--                  y="0"-->
+    <!--                  transform="rotateY(180deg)"-->
+    <!--                  style="transform-origin: bottom left; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="up-hand">-->
+    <!--                <image-->
+    <!--                  width="441"-->
+    <!--                  height="370"-->
+    <!--                  xlink:href="@/assets/images/up-hand.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(1,0,0,1,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="down-hand">-->
+    <!--                <image-->
+    <!--                  width="718"-->
+    <!--                  height="407"-->
+    <!--                  xlink:href="@/assets/images/down-hand.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(1,0,0,1,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="plus1">-->
+    <!--                <image-->
+    <!--                  width="576"-->
+    <!--                  height="433"-->
+    <!--                  preserveAspectRatio="none"-->
+    <!--                  xlink:href="@/assets/images/plus.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(0.1,0,0,0.1,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="plus2">-->
+    <!--                <image-->
+    <!--                  width="576"-->
+    <!--                  height="433"-->
+    <!--                  xlink:href="@/assets/images/plus.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(0.2,0,0,0.2,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="plus3">-->
+    <!--                <image-->
+    <!--                  width="576"-->
+    <!--                  height="433"-->
+    <!--                  xlink:href="@/assets/images/plus.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(0.05,0,0,0.05,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--              <g class="group-element" id="plus4">-->
+    <!--                <image-->
+    <!--                  width="576"-->
+    <!--                  height="433"-->
+    <!--                  xlink:href="@/assets/images/plus.png"-->
+    <!--                  x="859"-->
+    <!--                  y="189.89"-->
+    <!--                  transform="matrix(0.08,0,0,0.08,0,0)"-->
+    <!--                  style="transform-origin: 0px 0px; opacity: 1"-->
+    <!--                ></image>-->
+    <!--              </g>-->
+    <!--            </svg>-->
   </template>
 
   <script setup></script>
