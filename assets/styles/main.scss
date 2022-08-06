@@ -25,6 +25,16 @@ html {
     font-size: 20px;
   }
 }
+.darkText {
+  color: #000;
+}
+.dark-bg {
+  background-color: #000;
+}
+.dark-icon {
+  filter: invert(0);
+}
+
 .page-container {
   width: 100%;
   transition: width 0.1s;
@@ -238,7 +248,6 @@ p {
       &:first-child > img {
         width: 50%;
         height: 50%;
-        padding: 15rem;
       }
     }
 
@@ -737,20 +746,25 @@ p {
   & > img {
     width: 20%;
     height: 20%;
-    padding: 15rem;
   }
 }
 
 .wrapper-anim {
   height: 100%; /* collapse the container's height */
-  width: 50%; /* specify any width you want (a percentage value, basically) */
+  width: 100%; /* specify any width you want (a percentage value, basically) */
   /* apply a padding using the following formula */
   /* this formula makes sure the aspect ratio of the container equals that of the svg graphic */
   overflow: hidden;
   z-index: 45;
   position: absolute;
-  top: 15%;
+  top: 18%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   right: 0;
+  & > div {
+    width: 50%;
+  }
   //.plus {
   //  width: 80%;
   //
@@ -1306,7 +1320,8 @@ p {
 //Hizmetlerimiz page teklif alin
 .badge {
   display: flex;
-  background: linear-gradient(to right, #ff0099, #493240);
+  background: linear-gradient(270deg, #6f7586 4.8%, #1f2024 77.11%);
+  background-size: cover;
   flex-direction: row;
   position: relative;
   justify-content: space-between;

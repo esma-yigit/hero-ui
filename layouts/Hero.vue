@@ -1,5 +1,5 @@
 <template>
-  <main class="container-hero bg-hero">
+  <main class="container-hero" :style="`${bgHero}`">
     <div :class="{ top: isToggleOpen }" class="canvas-menu d-flex flex-row">
       <Transition name="canvas-left">
         <div v-if="isToggleOpen" class="left cur-close d-none d-sm-block">
@@ -272,7 +272,6 @@
       @swiper="onSwiper"
       :mousewheel="true"
       @slideChange="onSlideChange($event)"
-      :width="swiperWidth"
       :modules="modules"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -282,34 +281,48 @@
       <swiper-slide v-for="(slide, index) in sliders" :key="slide.id">
         <div class="container-hero-middle">
           <div class="container-hero-middle-start">
-            <h1 style="margin: 0">{{ slide.header }}</h1>
+            <h1 style="margin: 0" v-if="slide.header !== ''">
+              {{ slide.header }}
+            </h1>
+            <span class="py-44" v-else></span>
           </div>
           <div class="wrapper-anim">
             <component :is="slide.anim" />
-            <div class="relative">
-              <img
-                src="@/assets/images/hero-seo-fog.png"
-                class="w-full h-full -translate-y-12"
-              />
-            </div>
           </div>
           <div
             class="container-hero-middle-center block-effect"
             style="--td: 1.2s"
           >
-            <p class="title block-reveal" style="--bc: #438cdd; --d: 0.1s">
+            <p
+              class="title block-reveal"
+              style="--bc: #438cdd; --d: 0.1s"
+              :style="{ color: slide.darkMode ? darkText : '' }"
+            >
               {{ slide.text.first }}
             </p>
-            <p class="subtitle block-reveal" style="--bc: #d91f96; --d: 0.5s">
+            <p
+              class="subtitle block-reveal"
+              style="--bc: #d91f96; --d: 0.5s"
+              :style="{ color: slide.darkMode ? darkText : '' }"
+            >
               {{ slide.text.second }}
             </p>
-            <p class="text block-reveal" style="--bc: #438cdd; --d: 1s">
+            <p
+              class="text block-reveal"
+              style="--bc: #438cdd; --d: 1s"
+              :style="{ color: slide.darkMode ? darkText : '' }"
+            >
               {{ slide.text.third }}
             </p>
           </div>
           <div class="container-hero-middle-end">
             <div class="left">
-              <h4 class="text">#360° {{ slide.footer.text }}</h4>
+              <h4
+                class="text"
+                :style="{ color: slide.darkMode ? darkText : '' }"
+              >
+                #360° {{ slide.footer.text }}
+              </h4>
             </div>
             <div class="center">
               <button class="btn btn-gradient">
@@ -318,13 +331,28 @@
                 <img alt="" src="@/assets/images/forward.png" />
               </button>
               <button class="btn btn-transparent">
-                <img alt="" src="@/assets/images/icon-call.png" />
-                <span class="text">Bilgi Alın</span>
+                <img
+                  alt=""
+                  src="@/assets/images/icon-call.png"
+                  :style="{
+                    filter: slide.darkMode ? darkIcon : 'invert(100%)',
+                  }"
+                />
+                <span
+                  class="text"
+                  :style="{ color: slide.darkMode ? darkText : '' }"
+                  >Bilgi Alın</span
+                >
                 <img alt="" src="@/assets/images/forward.png" />
               </button>
             </div>
             <NuxtLink class="right">
-              <p class="text">Bir web sitesi ile basla</p>
+              <p
+                class="text"
+                :style="{ color: slide.darkMode ? darkText : '' }"
+              >
+                Bir web sitesi ile basla
+              </p>
               <img alt="" src="@/assets/images/forward.png" />
             </NuxtLink>
           </div>
@@ -369,17 +397,9 @@ import { Navigation, Autoplay, Mousewheel } from "swiper";
 import sliders from "@/constants/slider";
 // Import Swiper styles
 import "swiper/css";
-import GoogleYonetimi from "../components/svg/GoogleYonetimi";
-import IcerikYonetimi from "../components/svg/IcerikYonetimi";
-import SeoYonetimi from "../components/svg/SeoYonetimi";
-import DigitalYonetim from "../components/svg/DigitalYonetim";
 
 export default {
   components: {
-    DigitalYonetim,
-    SeoYonetimi,
-    IcerikYonetimi,
-    GoogleYonetimi,
     Swiper,
     SwiperSlide,
   },
@@ -391,14 +411,20 @@ export default {
     const isHover = useState("isHover", () => false);
     const bgHero = useState("bgHero", () => null);
     const onSlideChange = (e) => {
-      const activeSlide = sliders.filter(
-        (slide) => sliders.indexOf(slide) === e.activeIndex
-      );
+      const activeSlide = sliders[e.activeIndex - 1];
       bgHero.value = activeSlide.bgColor;
+      console.log(
+        activeSlide,
+        e.activeIndex,
+        bgHero.value,
+        sliders.indexOf(activeSlide)
+      );
     };
     const openDrawer = () => {
       isToggleOpen.value = !isToggleOpen.value;
     };
+    const darkText = useState("darkText", () => "#000000");
+    const darkIcon = useState("darkIcon", () => "invert(0)");
 
     return {
       onSwiper,
@@ -408,6 +434,9 @@ export default {
       isHover,
       isToggleOpen,
       openDrawer,
+      bgHero,
+      darkText,
+      darkIcon,
     };
   },
 };

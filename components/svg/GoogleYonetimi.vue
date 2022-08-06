@@ -3,7 +3,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 675 747"
+      viewBox="0 0 1275 1447"
     >
       <defs>
         <g class="group-element">
@@ -12,11 +12,11 @@
             preserveAspectRatio="none"
             width="100%"
             height="100%"
-            viewBox="0 0 612 408"
+            viewBox="0 0 1212 808"
           >
             <image
-              width="612"
-              height="408"
+              width="712"
+              height="808"
               xlink:href="@/assets/images/google-yonetimi-baloon-1.png"
             />
           </pattern>
@@ -25,8 +25,8 @@
       <g id="Group_469" transform="translate(-1069 27)">
         <g class="group-element">
           <rect
-            width="246"
-            height="164"
+            width="446"
+            height="264"
             rx="82"
             transform="translate(1478 1)"
             opacity="0.4"
@@ -34,8 +34,8 @@
           />
           <image
             id="down"
-            width="348"
-            height="453"
+            width="648"
+            height="853"
             transform="translate(1396 267)"
             xlink:href="@/assets/images/google-yonetimi-baloon-3.png"
           />

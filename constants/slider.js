@@ -3,77 +3,89 @@ import SosyalMedya from "@/components/svg/SosyalMedya.vue";
 import IcerikYonetimi from "@/components/svg/IcerikYonetimi.vue";
 import DigitalYonetim from "@/components/svg/DigitalYonetim.vue";
 import GoogleYonetimi from "@/components/svg/GoogleYonetimi.vue";
+import GoogleAds from "@/components/svg/GoogleAds.vue";
+import GoogleBusiness from "@/components/svg/GoogleBusiness.vue";
+import GoogleBusinessRaporlama from "@/components/svg/GoogleBusinessRaporlama.vue";
+import KonseptFotografCekimi from "@/components/svg/KonseptFotografCekimi.vue";
+import KurumsalSeo from "@/components/svg/KurumsalSeo.vue";
+import Produksiyon from "@/components/svg/Produksiyon.vue";
+import ProfesyonelEkipman from "@/components/svg/ProfesyonelEkipman.vue";
+import ReklamFilmi from "@/components/svg/ReklamFilmi.vue";
+import TanitimFilmi from "@/components/svg/TanitimFilmi.vue";
 
 export default [
   {
+    darkMode: false,
     id: "digital_yonetim",
     header: "marka",
     text: {
       first: "sıra dışı",
       second: "dijital yönetim",
       third:
-        "şletmenizi Google ve sosyal medyada  en kısa sürede \n" +
-        "en iyi noktaya ulaştırmanız için 360 derece dijital paket, \n" +
-        "Arma Digital’de.",
+        "şletmenizi Google ve sosyal medyada  en kısa sürede en iyi noktaya ulaştırmanız için 360 derece dijital paket, Arma Digital’de.",
     },
     footer: {
       text: "dijital yönetim",
     },
     anim: DigitalYonetim,
-    bgColor: "",
+    bgColor:
+      "background-image: url('/splash.png'),linear-gradient(90deg, #2b2b2b 15%, #6b7181 80%);background-repeat:no-repeat,no-repeat; background-size: contain, cover; background-position: right bottom,center;",
   },
   {
+    darkMode: false,
     id: "seo_yonetimi",
     header: "goool",
     text: {
       first: "iyi bir SEO",
       second: "gol getirir",
       third:
-        "Google’da siteniz ve sayfalarınız, kitlenizi \n" +
-        "rakiplerinizden sıyrılarak en üst sıralarda karşılasın.",
+        "Google’da siteniz ve sayfalarınız, kitlenizi rakiplerinizden sıyrılarak en üst sıralarda karşılasın.",
     },
     footer: {
       text: "SEO yönetimi",
     },
     anim: SeoYonetimi,
 
-    bgColor: "",
+    bgColor:
+      "background:#1D2F57;background-image:url('/hero-seo-fog.png');background-repeat:no-repeat; background-size:200px; background-position:100% 100%;",
   },
   {
+    darkMode: true,
     id: "google_yonetimi",
     header: "UUUÇ",
     text: {
       first: "markan google'da",
       second: "yükselsin!",
       third:
-        "Google’da siteniz ve sayfalarınız, kitlenizi \n" +
-        "rakiplerinizden sıyrılarak en üst sıralarda karşılasın.\n",
+        "Google’da siteniz ve sayfalarınız, kitlenizi rakiplerinizden sıyrılarak en üst sıralarda karşılasın.",
     },
     footer: {
       text: "Google yönetimi",
     },
     anim: GoogleYonetimi,
-    bgColor: "",
+    bgColor:
+      " background-image: url('/hero-google-yonetimi-up-cloud.png'), url('/hero-google-yonetimi-down-cloud.png');background-position: left top, left bottom top;background-repeat: no-repeat, no-repeat;background-size:cover",
   },
   {
+    darkMode: false,
     id: "sosyal_medya",
     header: "mutfak",
     text: {
       first: "sosyal medya'da",
       second: "işin mutfağı",
       third:
-        "Instagram, Facebook ve Youtube kanallarınızı bize bırakın, \n" +
-        "tüm içerik ve reklamlarınızı uzman ekibimiz yönetsin, \n" +
-        "kitlenize en etkili şekilde ulaşın.",
+        "Instagram, Facebook ve Youtube kanallarınızı bize bırakın, tüm içerik ve reklamlarınızı uzman ekibimiz yönetsin, kitlenize en etkili şekilde ulaşın.",
     },
     footer: {
       text: "sosyal medya",
     },
     anim: SosyalMedya,
 
-    bgColor: "",
+    bgColor:
+      "background:#542FA7;background-image: url('/sosyal-medya-dots.png'); background-position:80% 100%; background-repeat: no-repeat; background-size: contain;",
   },
   {
+    darkMode: false,
     id: "icerik_yonetimi",
     header: "BİZE BIRAK",
     text: {
@@ -86,6 +98,155 @@ export default [
       text: "İçerik yönetimi",
     },
     anim: IcerikYonetimi,
-    bgColor: "",
+    bgColor: "background:#494B5F;",
+  },
+  {
+    darkMode: false,
+    id: "kurumsal_seo",
+    header: "ZİRVEYE",
+    text: {
+      first: "Kurumsal SEO",
+      second: "markanızı zirveye taşıyalım!",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "KURUMSAL SEO",
+    },
+    anim: KurumsalSeo,
+    bgColor:
+      "background-color:#020D26;background-image: url('/kurumsal-seo-stars.png');background-position: center;background-repeat: no-repeat;background-size:cover",
+  },
+  {
+    darkMode: false,
+    id: "google_ads",
+    header: "1.SIRA",
+    text: {
+      first: "Google Ads",
+      second: "en düşük bütçe en yüksek verim!",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "GOOGLE ADS",
+    },
+    anim: GoogleAds,
+    bgColor: "background:#151515;",
+  },
+  {
+    darkMode: false,
+    id: "google_business",
+    header: "KRALSIN",
+    text: {
+      first: "Google Business Optimizasyonu",
+      second: "bölgenizde öncelik sizin olsun!",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "GOOGLE BUSINESS",
+    },
+    anim: GoogleBusiness,
+    bgColor:
+      "background:#EA5E06;background-image: url('/google-business-sand.png');background-position: bottom end;background-repeat: no-repeat;background-size:cover",
+  },
+  {
+    darkMode: false,
+    id: "google_business_raporlama",
+    header: "DÖNÜŞÜM",
+    text: {
+      first: "en iyi raporlama",
+      second: "aylık düzenli raporlama dönüşüm takibi",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "GOOGLE BUSINESS",
+    },
+    anim: GoogleBusinessRaporlama,
+    bgColor: "background:#F5F5F5;",
+  },
+  {
+    darkMode: false,
+    id: "produksiyon",
+    header: "",
+    text: {
+      first: "kaderimizse",
+
+      second: "çekeriz :)",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "PRODÜKSİYON",
+    },
+    anim: Produksiyon,
+    bgColor:
+      "background:#020D26; background-image: url('/produksiyon-bg.png');background-position: center;background-repeat: no-repeat;background-size:cover;",
+  },
+  {
+    darkMode: false,
+    id: "profesyonel_ekipman",
+    header: "",
+    text: {
+      first: "profesyonel ekip",
+      second: "güçlü ekipmanlar!",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "PROFESYONEL EKİPMAN",
+    },
+    anim: ProfesyonelEkipman,
+    bgColor:
+      "background:linear-gradient(238.04deg, #F2F6FF -0.58%, #080A0E 63.2%);",
+  },
+  {
+    darkMode: false,
+    id: "reklam_yonetimi",
+    header: "",
+    text: {
+      first: "tv ve sinemalar için",
+      second: "reklam ve kamu spotu çekimleri",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "KAMU SPOTU & REKLAM FİLMİ",
+    },
+    anim: ReklamFilmi,
+    bgColor: "background:#FFFFFF;",
+  },
+  {
+    darkMode: false,
+    id: "tanitim_filmi",
+    header: "",
+    text: {
+      first: "tanıtım filmi",
+      second: "",
+      third:
+        "İşletmenizi tanıtmanın en doğru yolu görsel hafızayı hedeflemektir.",
+    },
+    footer: {
+      text: "TANITIM FİLMİ",
+    },
+    anim: TanitimFilmi,
+    bgColor: "background:#262626;",
+  },
+  {
+    darkMode: false,
+    id: "konsept_fotograf_cekimi",
+    header: "",
+    text: {
+      first: "ürün & konsept fotoğraf",
+      second: "çekimleri ve dekupaj işlemleri",
+      third:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    footer: {
+      text: "KONSEPT FOTOĞRAF ÇEKİMİ",
+    },
+    anim: KonseptFotografCekimi,
+    bgColor: "background:#f2f2f2;",
   },
 ];
