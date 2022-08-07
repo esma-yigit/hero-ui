@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="various-images">
-      <img
-        src="@/assets/images/profesyonel-ekipman-fog-down.png"
-        alt=""
-        class="bottom-0 right-0 object-contain"
-      />
-      <img
-        src="@/assets/images/profesyonel-ekipman-fog-top.png"
-        alt=""
-        class="top-0 left-0 object-contain"
-      />
+      <!--      <img-->
+      <!--        src="@/assets/images/profesyonel-ekipman-fog-down.png"-->
+      <!--        alt=""-->
+      <!--        class="bottom-0 right-0 object-contain"-->
+      <!--      />-->
+      <!--      <img-->
+      <!--        src="@/assets/images/profesyonel-ekipman-fog-top.png"-->
+      <!--        alt=""-->
+      <!--        class="top-0 left-0 object-contain"-->
+      <!--      />-->
       <img
         src="@/assets/images/profesyonel-ekipman-drone.png"
         alt=""
-        class="absolute top-8 left-10"
+        class="absolute top-0 left-0"
       />
     </div>
     <img

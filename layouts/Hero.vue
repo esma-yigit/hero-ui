@@ -254,13 +254,28 @@
       </div>
       <div class="box-bottom">
         <div class="box">
-          <img alt="" class="icon" src="@/assets/images/icon-rocket.png" />
+          <img
+            alt=""
+            class="icon"
+            src="@/assets/images/icon-rocket.png"
+            :style="{ filter: setDarkIcon ? darkIcon : '' }"
+          />
         </div>
         <div class="box">
-          <img alt="" class="icon" src="@/assets/images/icon-hearth.png" />
+          <img
+            alt=""
+            class="icon"
+            src="@/assets/images/icon-hearth.png"
+            :style="{ filter: setDarkIcon ? darkIcon : '' }"
+          />
         </div>
         <div class="box">
-          <img alt="" class="icon" src="@/assets/images/icon-arrow-top.png" />
+          <img
+            alt=""
+            class="icon"
+            src="@/assets/images/icon-arrow-top.png"
+            :style="{ filter: setDarkIcon ? darkIcon : '' }"
+          />
         </div>
       </div>
     </div>
@@ -335,7 +350,7 @@
                   alt=""
                   src="@/assets/images/icon-call.png"
                   :style="{
-                    filter: slide.darkMode ? darkIcon : 'invert(100%)',
+                    filter: slide.darkMode ? darkIcon : '',
                   }"
                 />
                 <span
@@ -343,7 +358,13 @@
                   :style="{ color: slide.darkMode ? darkText : '' }"
                   >Bilgi Alın</span
                 >
-                <img alt="" src="@/assets/images/forward.png" />
+                <img
+                  alt=""
+                  src="@/assets/images/forward.png"
+                  :style="{
+                    filter: slide.darkMode ? darkIcon : '',
+                  }"
+                />
               </button>
             </div>
             <NuxtLink class="right">
@@ -353,7 +374,13 @@
               >
                 Bir web sitesi ile basla
               </p>
-              <img alt="" src="@/assets/images/forward.png" />
+              <img
+                alt=""
+                src="@/assets/images/forward.png"
+                :style="{
+                  filter: slide.darkMode ? darkIcon : '',
+                }"
+              />
             </NuxtLink>
           </div>
         </div>
@@ -379,10 +406,20 @@
       </div>
       <div class="box-bottom swiper-button-next">
         <div class="box">
-          <img alt="" class="icon" src="@/assets/images/next.png" />
+          <img
+            alt=""
+            class="icon"
+            src="@/assets/images/next.png"
+            :style="{ filter: setDarkIcon ? darkIcon : '' }"
+          />
         </div>
         <div class="box swiper-button-prev">
-          <img alt="" class="icon" src="@/assets/images/prev.png" />
+          <img
+            alt=""
+            class="icon"
+            src="@/assets/images/prev.png"
+            :style="{ filter: setDarkIcon ? darkIcon : '' }"
+          />
         </div>
       </div>
     </div>
@@ -392,6 +429,7 @@
 </template>
 
 <script>
+import { computed } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Autoplay, Mousewheel } from "swiper";
 import sliders from "@/constants/slider";
@@ -410,8 +448,10 @@ export default {
     const isToggleOpen = useState("isToggleOpen", () => false);
     const isHover = useState("isHover", () => false);
     const bgHero = useState("bgHero", () => null);
+    const setDarkIcon = useState("setDarkIcon", () => null);
     const onSlideChange = (e) => {
       const activeSlide = sliders[e.activeIndex - 1];
+      setDarkIcon.value = activeSlide.darkMode;
       bgHero.value = activeSlide.bgColor;
       console.log(
         activeSlide,
@@ -424,8 +464,10 @@ export default {
       isToggleOpen.value = !isToggleOpen.value;
     };
     const darkText = useState("darkText", () => "#000000");
-    const darkIcon = useState("darkIcon", () => "invert(0)");
-
+    const darkIcon = useState("darkIcon", () => "invert(100%)");
+    const getDarkModeSlides = computed(() => {
+      return sliders.filter((slide) => slide.darkMode);
+    });
     return {
       onSwiper,
       onSlideChange,
@@ -437,6 +479,7 @@ export default {
       bgHero,
       darkText,
       darkIcon,
+      setDarkIcon,
     };
   },
 };

@@ -25,10 +25,10 @@
             <NuxtLink to="/"> Ana Sayfa</NuxtLink>
           </div>
           <div class="cursor-pointer">
-            <NuxtLink to="/">Biz Kimiz</NuxtLink>
+            <NuxtLink to="/hakkimizda">Biz Kimiz</NuxtLink>
           </div>
           <div class="flex cursor-pointer items-center justify-center">
-            <NuxtLink to="/">360 Hizmetler</NuxtLink>
+            <NuxtLink to="/hizmetlerimiz">360 Hizmetler</NuxtLink>
             <img class="invert w-1/6" src="@/assets/images/next.png" alt="" />
           </div>
         </div>

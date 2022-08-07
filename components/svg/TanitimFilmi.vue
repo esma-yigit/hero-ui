@@ -1,95 +1,43 @@
 <template>
   <div>
     <svg
+      viewBox="0 0 241.3 136.7896"
+      version="1.1"
+      id="svg5"
+      xml:space="preserve"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:svg="http://www.w3.org/2000/svg"
-      xml:space="preserve"
-      id="svg5"
-      version="1.1"
-      viewBox="0 0 303.93918 235.70421"
     >
       <defs id="defs2" />
-      <g id="layer1" transform="translate(335.57142,-45.187846)">
-        <g id="g673">
-          <g class="group-element">
-            <image
-              width="116.68125"
-              height="97.895836"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/up-hand.png "
-              id="up-hand"
-              x="-148.31348"
-              y="87.059258"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="200.02499"
-              height="175.15416"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/tiger.png "
-              id="tiger"
-              x="135.54642"
-              y="45.187847"
-              transform="scale(-1,1)"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="23.797091"
-              height="23.797091"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/plus.png"
-              id="plus-1"
-              x="-161.22829"
-              y="104.61229"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="14.869664"
-              height="14.869664"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/plus.png"
-              id="plus2"
-              x="-175.80446"
-              y="54.707863"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="11.359553"
-              height="11.359553"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/plus.png "
-              id="plus3"
-              x="-141.81339"
-              y="61.912376"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="14.428222"
-              height="14.428222"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/plus.png "
-              id="plus4"
-              x="-184.79619"
-              y="85.227394"
-            />
-          </g>
-          <g class="group-element">
-            <image
-              width="189.97084"
-              height="107.68542"
-              preserveAspectRatio="none"
-              xlink:href="@/assets/images/down-hand.png "
-              id="down-hand"
-              x="-222.92662"
-              y="173.20665"
-            />
-          </g>
+      <g id="layer1" transform="translate(231.99967,36.576983)">
+        <g id="g234" transform="translate(-100.63171,-45.464243)">
+          <image
+            width="24.077084"
+            height="7.9375"
+            preserveAspectRatio="none"
+            xlink:href="@/assets/images/tanitim-filmi-rec.png"
+            id="image33"
+            x="74.969772"
+            y="15.621561"
+          />
+          <image
+            width="241.3"
+            height="136.78958"
+            preserveAspectRatio="none"
+            xlink:href="@/assets/images/tanitim-filmi-camera-rectangle.png"
+            id="image45"
+            x="-131.36795"
+            y="8.8872604"
+          />
+          <image
+            width="160.86667"
+            height="76.199997"
+            preserveAspectRatio="none"
+            xlink:href="@/assets/images/tanitim-filmi-camera-focus-center.png"
+            id="image57"
+            x="-91.151283"
+            y="39.182053"
+          />
         </g>
       </g>
     </svg>

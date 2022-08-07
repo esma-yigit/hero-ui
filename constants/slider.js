@@ -11,7 +11,7 @@ import KurumsalSeo from "@/components/svg/KurumsalSeo.vue";
 import Produksiyon from "@/components/svg/Produksiyon.vue";
 import ProfesyonelEkipman from "@/components/svg/ProfesyonelEkipman.vue";
 import ReklamFilmi from "@/components/svg/ReklamFilmi.vue";
-import TanitimFilmi from "@/components/svg/TanitimFilmi.vue";
+import TanitimFilmi from "~/components/svg/TanitimFilmi.vue";
 
 export default [
   {
@@ -47,7 +47,7 @@ export default [
     anim: SeoYonetimi,
 
     bgColor:
-      "background:#1D2F57;background-image:url('/hero-seo-fog.png');background-repeat:no-repeat; background-size:200px; background-position:100% 100%;",
+      "background:#1D2F57;background-image:url('/hero-seo-fog.png');background-repeat:no-repeat; background-size:50%; background-position:100% 100%;",
   },
   {
     darkMode: true,
@@ -131,7 +131,8 @@ export default [
       text: "GOOGLE ADS",
     },
     anim: GoogleAds,
-    bgColor: "background:#151515;",
+    bgColor:
+      "background:#151515; background-image: url('/google-ads-bg.png'); background-position:center; background-repeat: no-repeat; background-size: cover;",
   },
   {
     darkMode: false,
@@ -151,7 +152,7 @@ export default [
       "background:#EA5E06;background-image: url('/google-business-sand.png');background-position: bottom end;background-repeat: no-repeat;background-size:cover",
   },
   {
-    darkMode: false,
+    darkMode: true,
     id: "google_business_raporlama",
     header: "DÖNÜŞÜM",
     text: {
@@ -199,10 +200,10 @@ export default [
     },
     anim: ProfesyonelEkipman,
     bgColor:
-      "background:linear-gradient(238.04deg, #F2F6FF -0.58%, #080A0E 63.2%);",
+      "background-image: url('/profesyonel-ekipman-fog-top.png'),url('/profesyonel-ekipman-fog-down.png'),linear-gradient(238deg, #F2F6FF 1%, #080A0E 63%);background-position:0px 0px, 80% 100%;background-repeat:no-repeat, no-repeat;background-size:60%,60%,cover;",
   },
   {
-    darkMode: false,
+    darkMode: true,
     id: "reklam_yonetimi",
     header: "",
     text: {
@@ -215,7 +216,8 @@ export default [
       text: "KAMU SPOTU & REKLAM FİLMİ",
     },
     anim: ReklamFilmi,
-    bgColor: "background:#FFFFFF;",
+    bgColor:
+      "background:#FFFFFF; background-image: url('/kamu-spotu-people.png');background-position: top right;background-repeat: no-repeat;background-size:contain;",
   },
   {
     darkMode: false,
@@ -231,10 +233,11 @@ export default [
       text: "TANITIM FİLMİ",
     },
     anim: TanitimFilmi,
-    bgColor: "background:#262626;",
+    bgColor:
+      "background:#262626;background-image: url('/tanitim-filmi-bg.png');background-position: center;background-repeat: no-repeat;background-size:cover;",
   },
   {
-    darkMode: false,
+    darkMode: true,
     id: "konsept_fotograf_cekimi",
     header: "",
     text: {
@@ -247,6 +250,7 @@ export default [
       text: "KONSEPT FOTOĞRAF ÇEKİMİ",
     },
     anim: KonseptFotografCekimi,
-    bgColor: "background:#f2f2f2;",
+    bgColor:
+      "background:#f2f2f2; background-image: url('/konsept-people.png');background-position: 110% 100%;background-repeat: no-repeat;background-size:contain;",
   },
 ];
