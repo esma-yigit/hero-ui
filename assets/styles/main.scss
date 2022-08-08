@@ -9,7 +9,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
   font-size: 16px;
   font-weight: 400;
   background-color: #fff;
@@ -210,6 +209,7 @@ p {
   min-height: 100vh;
   margin: auto;
   position: sticky;
+  overflow: hidden;
 
   left: 0;
   top: 0;
@@ -1158,12 +1158,12 @@ p {
 //tab-content backgorundu duzenle
 .tab-content {
   max-height: 0;
-  //background: linear-gradient(
-  //  269.99deg,
-  //  #9c44b3 -37.47%,
-  //  #6e67ca 60.42%,
-  //  #3954e4 143.15%
-  //);
+  background: linear-gradient(
+    269.99deg,
+    #9c44b3 -37.47%,
+    #6e67ca 60.42%,
+    #3954e4 143.15%
+  );
   -webkit-transition: max-height 0.35s;
   -o-transition: max-height 0.35s;
   transition: max-height 0.35s;
