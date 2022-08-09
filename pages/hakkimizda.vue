@@ -153,7 +153,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col container space-y-10">
+        <div class="flex flex-col space-y-10">
           <div class="text-center">
             <span
               class="capitalize text-base sm:text-md md:text-3xl whitespace-nowrap"

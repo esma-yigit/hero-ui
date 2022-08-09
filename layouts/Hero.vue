@@ -33,7 +33,10 @@
                   </NuxtLink>
                   <ul class="dropdown-menu">
                     <li class="dropdown-item">
-                      <NuxtLink class="dropdown-item-link"
+                      <NuxtLink
+                        class="dropdown-item-link"
+                        to="/hizmetlerimiz/digital-yonetim"
+                      >
                         >360° Digital Yonetim
                       </NuxtLink>
                     </li>
