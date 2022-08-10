@@ -29,6 +29,7 @@
                     rel="nofollow"
                     target="_self"
                     to="/hizmetlerimiz"
+                    no-rel
                     >HIZMETLERIMIZ
                   </NuxtLink>
                   <ul class="dropdown-menu">
@@ -37,26 +38,34 @@
                         class="dropdown-item-link"
                         to="/hizmetlerimiz/digital-yonetim"
                       >
-                        >360° Digital Yonetim
+                        360° Digital Yonetim
                       </NuxtLink>
                     </li>
                     <li class="dropdown-item">
-                      <NuxtLink class="dropdown-item-link"
+                      <NuxtLink
+                        class="dropdown-item-link"
+                        to="/hizmetlerimiz/digital-yonetim"
                         >360° Seo Yonetimi
                       </NuxtLink>
                     </li>
                     <li class="dropdown-item">
-                      <NuxtLink class="dropdown-item-link"
+                      <NuxtLink
+                        class="dropdown-item-link"
+                        to="/hizmetlerimiz/digital-yonetim"
                         >360° Google Yonetimi
                       </NuxtLink>
                     </li>
                     <li class="dropdown-item">
-                      <NuxtLink class="dropdown-item-link"
+                      <NuxtLink
+                        class="dropdown-item-link"
+                        to="/hizmetlerimiz/digital-yonetim"
                         >360° Sosyal Medya Yonetimi
                       </NuxtLink>
                     </li>
                     <li class="dropdown-item">
-                      <NuxtLink class="dropdown-item-link"
+                      <NuxtLink
+                        class="dropdown-item-link"
+                        to="/hizmetlerimiz/digital-yonetim"
                         >360° Icerik Yonetimi
                       </NuxtLink>
                     </li>

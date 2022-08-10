@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-1 sm:grid-cols-5 py-2 grid-rows-5 item-stretch sm:grid-rows-1 bg-pink-100 items-center border border-t-slate-700"
+    class="grid grid-cols-1 sm:grid-cols-5 py-2 grid-rows-5 item-stretch sm:grid-rows-1 items-center border border-t-slate-700"
   >
     <div class="col-span-1 py-8 flex items-center justify-center">
       <img src="@/assets/images/center-logo.png" alt="hizmetlerimiz-logo" />

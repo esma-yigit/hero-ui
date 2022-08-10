@@ -1602,3 +1602,19 @@ p {
     transform: scale(1.5);
   }
 }
+
+.border-hero {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.border-left {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+.border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}

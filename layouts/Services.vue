@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="main-pages">
+  <NuxtLayout name="main-pages-hizmetlerimiz">
     <template #page-content>
       <section class="page-container">
         <div class="flex mb-32">
@@ -32,36 +32,77 @@
             >
           </div>
           <div
-            class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 sm:pt-12"
+            class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-24 sm:pt-12"
           >
             <div v-for="i in 6" :key="i">
-              <div
-                class="flex items-center justify-center border aspect-square"
-              >
-                <img
-                  src="@/assets/images/yildiz-entegre.png"
-                  alt=""
-                  class="object-contain w-full h-full"
-                />
-              </div>
-              <div class="flex flex-col space-y-4">
-                <h6 class="font-normal text-lg">
-                  Lorem ipsum dolor sit amet, consectetur
-                </h6>
-                <p class="font-light text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud
-                </p>
+              <div>
+                <div
+                  class="flex items-center justify-center border bc w-full h-full p-20 rounded-3xl"
+                >
+                  <img
+                    src="@/assets/images/page-icon-2.png"
+                    alt=""
+                    class="object-contain w-3/5 h-3/5"
+                  />
+                </div>
+                <div class="flex flex-col space-y-4 mt-8">
+                  <h6 class="font-normal text-lg">
+                    Lorem ipsum dolor sit amet, consectetur
+                  </h6>
+                  <p class="font-light text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <BadgeTeklifAlin />
+      <div class="flex flex-col space-y-10 mt-32 page-container mb-32">
+        <div class="text-center">
+          <span
+            class="capitalize text-base sm:text-md md:text-3xl whitespace-nowrap"
+            >Bizimle basariya ulasanlar</span
+          >
+        </div>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 md:gap-8 sm:pt-12"
+        >
+          <div
+            class="flex items-center justify-center border aspect-square p-6"
+            v-for="i in 12"
+            :key="i"
+          >
+            <img
+              src="@/assets/images/yildiz-entegre.png"
+              alt=""
+              class="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+      <FooterContact />
     </template>
   </NuxtLayout>
 </template>
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.bc {
+  background: url("@/assets/images/page-card-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+</style>
+<script>
+import BadgeTeklifAlin from "../components/BadgeTeklifAlin";
+import FooterContact from "../components/FooterContact";
+export default {
+  components: { FooterContact, BadgeTeklifAlin },
+};
+</script>

@@ -8,10 +8,10 @@
               <div
                 class="service-card"
                 style="
-                  background-image: url('/splash.png'),
-                    linear-gradient(90deg, #2b2b2b 15%, #6b7181 80%);
-                  background-repeat: no-repeat, no-repeat;
                   background-size: contain, cover;
+                  background: url('/splash.png'),
+                    linear-gradient(90deg, #2b2b2b 15%, #6b7181 80%);
+                  background-repeat: no-repeat;
                   background-position: right bottom, center;
                 "
               >

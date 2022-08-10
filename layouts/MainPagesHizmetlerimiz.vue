@@ -15,27 +15,27 @@
       </div>
 
       <div
-        class="col-span-11 col-start-2 col-end-13 row-start-1 row-start2 px-12 border-bottom"
+        class="col-span-11 col-start-2 col-end-13 row-start-1 row-end-2 border-bottom"
       >
         <div
-          class="flex items-center justify-between row-start-1 row-end-2 w-4/5 h-full mx-auto"
+          class="flex items-center justify-between row-start-1 page-container mb-4"
         >
-          <div class="flex items-center cursor-pointer">
-            <img class="invert w-1/6" src="@/assets/images/prev.png" alt="" />
-            <NuxtLink to="/"> Ana Sayfa</NuxtLink>
-          </div>
-          <div class="cursor-pointer">
-            <NuxtLink to="/hakkimizda">Biz Kimiz</NuxtLink>
-          </div>
-          <div class="flex cursor-pointer items-center justify-center">
-            <NuxtLink to="/hizmetlerimiz">360 Hizmetler</NuxtLink>
-            <img class="invert w-1/6" src="@/assets/images/next.png" alt="" />
+          <div
+            class="flex items-center cursor-pointer"
+            v-for="(item, index) in hizmetlerimizNavItems"
+            :key="index"
+          >
+            <div>
+              <NuxtLink :to="item.direct">
+                <span>360</span> {{ item.name }}</NuxtLink
+              >
+            </div>
           </div>
         </div>
       </div>
 
       <div
-        class="col-span-1 col-start-13 col-end-14 row-start-1 row-end-2 flex justify-center items-center border-left border-bottom"
+        class="col-span-1 col-start-13 col-end-14 row-start-1 row-end-2 flex justify-center items-center border-bottom border-left"
         @click="openDrawer"
         @mouseleave="isHover = false"
         @mouseover.prevent="isHover = true"
@@ -56,10 +56,10 @@
         class="col-span-1 col-start-1 col-end-2 grid grid-rows-6 max-h-[845px]"
       >
         <div
-          class="row-span-3 row-start-1 row-end-4 w-full h-full border-right border-bottom"
+          class="row-span-3 row-start-1 row-end-4 w-full h-full border-bottom border-right"
         ></div>
         <div
-          class="row-span-1 row-start-4 p-14 row-end-5 col-span-1 col-start-1 col-end-2 border-right border-bottom"
+          class="row-span-1 row-start-4 p-14 row-end-5 col-span-1 col-start-1 col-end-2 border-bottom border-right"
         >
           <img
             alt=""
@@ -68,7 +68,7 @@
           />
         </div>
         <div
-          class="row-span-1 row-start-5 p-14 row-end-6 col-span-1 border-right border-bottom"
+          class="row-span-1 row-start-5 p-14 row-end-6 col-span-1 border-bottom border-right"
         >
           <img
             alt=""
@@ -77,7 +77,7 @@
           />
         </div>
         <div
-          class="row-span-1 row-start-6 p-14 row-end-7 col-span-1 border-right border-bottom"
+          class="row-span-1 row-start-6 p-14 row-end-7 col-span-1 border-bottom border-right"
         >
           <img
             alt=""
@@ -93,10 +93,11 @@
         class="col-span-1 grid grid-rows-6 col-start-13 col-end-14 max-h-[845px]"
       >
         <div
-          class="row-span-4 row-start-1 row-end-5 border-left border-bottom"
+          class="row-span-4 row-start-1 row-end-5 border-bottom border-left"
         ></div>
+
         <div
-          class="row-span-1 row-start-5 p-14 row-end-6 col-span-1 border-left border-bottom"
+          class="row-span-1 row-start-5 p-14 row-end-6 col-span-1 border-bottom border-left"
         >
           <img
             alt=""
@@ -105,7 +106,7 @@
           />
         </div>
         <div
-          class="row-span-1 row-start-6 p-14 row-end-7 col-span-1 border-left border-bottom"
+          class="row-span-1 row-start-6 p-14 row-end-7 col-span-1 border-bottom border-left"
         >
           <img
             alt=""
@@ -119,6 +120,7 @@
 </template>
 
 <script setup>
+import hizmetlerimizNavItems from "@/constants/hizmetlerimizNavItems";
 const isToggleOpen = useState("isToggleOpen", () => false);
 const isHover = useState("isHover", () => false);
 const openDrawer = () => {
