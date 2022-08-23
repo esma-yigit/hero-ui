@@ -1,9 +1,9 @@
 <template>
   <div
-    class="grid grid-cols-1 sm:grid-cols-5 py-2 grid-rows-5 item-stretch sm:grid-rows-1 items-center border border-t-slate-700"
+    class="grid grid-cols-1 sm:grid-cols-5 py-2 grid-rows-5 item-stretch sm:grid-rows-1 items-center border-top"
   >
-    <div class="col-span-1 py-8 flex items-center justify-center">
-      <img src="@/assets/images/center-logo.png" alt="hizmetlerimiz-logo" />
+    <div class="col-span-1 py-8 flex items-center justify-center border-right">
+      <img src="@/assets/images/footer-logo.png" alt="logo" />
     </div>
     <div
       class="col-span-1 py-8 border sm:border-b-0 border-b-slate-700 sm:border-b-0 sm:border-l-slate-700 pl-0 sm:pl-8"
@@ -12,7 +12,7 @@
       <p class="lowercase text-4xl font-medium">444 32 76</p>
     </div>
     <div
-      class="col-span-1 py-8 row-start-5 row-end-6 sm:col-start-3 sm:col-end-4 sm:row-start-0 sm:row-start-1"
+      class="col-span-1 py-8 row-start-5 row-end-6 sm:col-start-3 sm:col-end-4 sm:row-start-0 sm:row-start-1 border-right"
     >
       <div class="flex items-center">
         <NuxtLink
@@ -165,16 +165,12 @@
         </NuxtLink>
       </div>
     </div>
-    <div
-      class="col-span-1 pl-0 sm:pl-8 py-8 flex flex-col items-start border sm:border-b-0 border-b-slate-700 sm:border-l-slate-700"
-    >
+    <div class="col-span-1 pl-0 sm:pl-8 py-8 flex flex-col items-start">
       <p class="text-base md:text-xl text-slate-600">Denge Tower B</p>
       <p class="text-base md:text-xl text-slate-600">B Blok</p>
       <p class="text-base md:text-xl text-slate-600">Kat 3 Daire 15</p>
     </div>
-    <div
-      class="col-span-1 pl-0 sm:pl-8 py-8 flex flex-col border sm:border-b-0 border-b-slate-700 sm:border-l-slate-700"
-    >
+    <div class="col-span-1 pl-0 sm:pl-8 py-8 flex flex-col">
       <p class="text-base md:text-xl text-slate-600">0216 646 35 10</p>
       <p class="text-base md:text-xl text-slate-600">0216 646 35 10</p>
       <p class="text-base md:text-xl text-slate-600">0859 646 35 10</p>

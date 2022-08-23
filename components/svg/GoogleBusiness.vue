@@ -3,7 +3,7 @@
     <img
       src="@/assets/images/google-business-lion.png"
       alt=""
-      class="object-contain"
+      class="object-contain lion"
     />
   </div>
 </template>

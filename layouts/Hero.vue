@@ -1,6 +1,6 @@
 <template>
   <main class="container-hero" :style="`${bgHero}`">
-    <div :class="{ top: isToggleOpen }" class="canvas-menu d-flex flex-row">
+    <div v-if="isToggleOpen" class="canvas-menu d-flex flex-row">
       <Transition name="canvas-left">
         <div v-if="isToggleOpen" class="left cur-close d-none d-sm-block">
           <img
@@ -30,7 +30,7 @@
                     target="_self"
                     to="/hizmetlerimiz"
                     no-rel
-                    >HIZMETLERIMIZ
+                    >HİZMETLERİMİZ
                   </NuxtLink>
                   <ul class="dropdown-menu">
                     <li class="dropdown-item">
@@ -76,7 +76,7 @@
                     class="nav-link"
                     rel="nofollow"
                     target="_self"
-                    to="/hakkimizda"
+                    to="/biz-kimiz"
                     >BİZ KİMİZ
                   </NuxtLink>
                 </li>
@@ -85,7 +85,7 @@
                     class="nav-link"
                     rel="nofollow"
                     target="_self"
-                    to="/neler-yaptik"
+                    to="/bize-ulasin"
                   >
                     BIZE ULASIN
                   </NuxtLink>
@@ -255,7 +255,24 @@
       </Transition>
     </div>
 
-    <NuxtLayout name="mobile" :is-hover="isHover" />
+    <NuxtLayout name="mobile" :is-hover="isHover">
+      <template #toggle-menu>
+        <div
+          class="toggle-menu"
+          @click="openDrawer"
+          @mouseleave="isHover = false"
+          @mouseover.prevent="isHover = true"
+        >
+          <Transition name="hover-top"
+            ><span v-if="isHover === false"></span
+          ></Transition>
+          <button></button>
+          <Transition name="hover-down"
+            ><span v-if="isHover === false"></span
+          ></Transition>
+        </div>
+      </template>
+    </NuxtLayout>
     <div class="container-hero-left">
       <div class="box-top box">
         <img
@@ -308,36 +325,47 @@
       <swiper-slide v-for="(slide, index) in sliders" :key="slide.id">
         <div class="container-hero-middle">
           <div class="container-hero-middle-start">
-            <h1 style="margin: 0" v-if="slide.header !== ''">
+            <h1 :style="slide.style.header" v-if="slide.header !== ''">
               {{ slide.header }}
             </h1>
-            <span class="py-44" v-else></span>
           </div>
-          <div class="wrapper-anim">
+          <div class="wrapper-anim" :style="slide.style.animContainer">
             <component :is="slide.anim" />
           </div>
           <div
             class="container-hero-middle-center block-effect"
+            :class="[slide.text.second.hasOwnProperty('fline') ? '' : 'mt-8']"
             style="--td: 1.2s"
           >
             <p
               class="title block-reveal"
               style="--bc: #438cdd; --d: 0.1s"
-              :style="{ color: slide.darkMode ? darkText : '' }"
+              :style="slide.style.textFirst"
             >
               {{ slide.text.first }}
             </p>
             <p
               class="subtitle block-reveal"
               style="--bc: #d91f96; --d: 0.5s"
-              :style="{ color: slide.darkMode ? darkText : '' }"
+              :style="slide.style.textSecond"
             >
-              {{ slide.text.second }}
+              <span
+                v-if="slide.text.second.hasOwnProperty('fline')"
+                class="flex flex-col"
+              >
+                <span class="whitespace-nowrap leading-4">{{
+                  slide.text.second.fline
+                }}</span>
+                <span class="whitespace-nowrap leading-relaxed">{{
+                  slide.text.second.sline
+                }}</span></span
+              >
+              <span v-else>{{ slide.text.second }}</span>
             </p>
             <p
               class="text block-reveal"
               style="--bc: #438cdd; --d: 1s"
-              :style="{ color: slide.darkMode ? darkText : '' }"
+              :style="slide.style.textThird"
             >
               {{ slide.text.third }}
             </p>
@@ -357,7 +385,12 @@
                 <span class="text">Keşfedin</span>
                 <img alt="" src="@/assets/images/forward.png" />
               </button>
-              <button class="btn btn-transparent">
+              <button
+                class="btn btn-transparent"
+                :style="{
+                  borderColor: slide.darkMode ? darkText : '',
+                }"
+              >
                 <img
                   alt=""
                   src="@/assets/images/icon-call.png"
@@ -465,12 +498,6 @@ export default {
       const activeSlide = sliders[e.activeIndex - 1];
       setDarkIcon.value = activeSlide.darkMode;
       bgHero.value = activeSlide.bgColor;
-      console.log(
-        activeSlide,
-        e.activeIndex,
-        bgHero.value,
-        sliders.indexOf(activeSlide)
-      );
     };
     const openDrawer = () => {
       isToggleOpen.value = !isToggleOpen.value;

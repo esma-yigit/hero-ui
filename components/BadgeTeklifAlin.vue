@@ -1,5 +1,5 @@
 <template>
-  <div class="badge">
+  <div class="badge mt-12 mb-12">
     <div class="badge-text">
       <p class="first">Simdi baslayin.</p>
       <p class="second">360 ile</p>

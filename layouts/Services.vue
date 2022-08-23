@@ -71,17 +71,11 @@
         <div
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 md:gap-8 sm:pt-12"
         >
-          <div
-            class="flex items-center justify-center border aspect-square p-6"
-            v-for="i in 12"
-            :key="i"
-          >
-            <img
-              src="@/assets/images/yildiz-entegre.png"
-              alt=""
-              class="object-contain w-full h-full"
-            />
-          </div>
+          <CardCompany v-for="i in companyLogos" :key="i.name">
+            <template #img>
+              <img :src="i.logo" alt="" class="object-contain w-full h-full" />
+            </template>
+          </CardCompany>
         </div>
       </div>
       <FooterContact />
@@ -89,7 +83,10 @@
   </NuxtLayout>
 </template>
 
-<script setup></script>
+<script setup>
+import CardCompany from "../components/base/CardCompany";
+import companyLogos from "@/constants/companyLogos";
+</script>
 
 <style scoped>
 .bc {

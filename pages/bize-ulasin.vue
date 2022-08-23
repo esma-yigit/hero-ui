@@ -60,7 +60,7 @@
           class="flex w-full flex-col sm:flex-row space-x-0 space-y-2 sm:space-y-0 sm:space-x-8 h-96 mb-12"
         >
           <div class="w-full sm:w-1/3 bg-slate-800">
-            <div CLASS="flex flex-col justify-between text-white h-full p-12">
+            <div class="flex flex-col justify-between text-white h-full p-12">
               <div class="flex flex-col">
                 <p class="text-2xl">Simdi baslayin.</p>
                 <p class="text-2xl">360ile markanizi</p>

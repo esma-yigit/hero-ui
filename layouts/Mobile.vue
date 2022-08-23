@@ -1,17 +1,10 @@
 <template>
-  <div class="mobile">
+  <div class="mobile page-container">
     <div class="mobile-logo">
       <img alt="" class="mobile-img" src="~/assets/images/logo.svg" />
     </div>
-    <div class="toggle-menu">
-      <Transition name="hover-top"
-        ><span v-if="props.isHover === false"></span
-      ></Transition>
-      <button></button>
-      <Transition name="hover-down"
-        ><span v-if="props.isHover === false"></span
-      ></Transition>
-    </div>
+
+    <slot name="toggle-menu"></slot>
   </div>
 </template>
 

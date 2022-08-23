@@ -17,12 +17,20 @@ export default [
   {
     darkMode: false,
     id: "digital_yonetim",
+
+    style: {
+      header: "",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
     header: "marka",
     text: {
       first: "sıra dışı",
       second: "dijital yönetim",
       third:
-        "şletmenizi Google ve sosyal medyada  en kısa sürede en iyi noktaya ulaştırmanız için 360 derece dijital paket, Arma Digital’de.",
+        "işletmenizi Google ve sosyal medyada  en kısa sürede en iyi noktaya ulaştırmanız için 360 derece dijital paket, Arma Digital’de.",
     },
     footer: {
       text: "dijital yönetim",
@@ -34,10 +42,17 @@ export default [
   {
     darkMode: false,
     id: "seo_yonetimi",
+    style: {
+      header: "",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "right:10%;",
+    },
     header: "goool",
     text: {
       first: "iyi bir SEO",
-      second: "gol getirir",
+      second: "gol getirir!",
       third:
         "Google’da siteniz ve sayfalarınız, kitlenizi rakiplerinizden sıyrılarak en üst sıralarda karşılasın.",
     },
@@ -52,6 +67,13 @@ export default [
   {
     darkMode: true,
     id: "google_yonetimi",
+    style: {
+      header: "",
+      textFirst: "color: black;",
+      textSecond: "color: black;",
+      textThird: "color: black;",
+      animContainer: " top:10%;",
+    },
     header: "UUUÇ",
     text: {
       first: "markan google'da",
@@ -69,6 +91,13 @@ export default [
   {
     darkMode: false,
     id: "sosyal_medya",
+    style: {
+      header: "font-size:18vw;",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
     header: "mutfak",
     text: {
       first: "sosyal medya'da",
@@ -87,6 +116,13 @@ export default [
   {
     darkMode: false,
     id: "icerik_yonetimi",
+    style: {
+      header: "font-size:14vw; margin-bottom:8rem;",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "width:90%;top:18%",
+    },
     header: "BİZE BIRAK",
     text: {
       first: "web sitesi içeriğini",
@@ -103,10 +139,20 @@ export default [
   {
     darkMode: false,
     id: "kurumsal_seo",
+    style: {
+      header: "",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
     header: "ZİRVEYE",
     text: {
       first: "Kurumsal SEO",
-      second: "markanızı zirveye taşıyalım!",
+      second: {
+        fline: "markanızı",
+        sline: "zirveye taşıyalım!",
+      },
       third:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
@@ -120,10 +166,20 @@ export default [
   {
     darkMode: false,
     id: "google_ads",
+    style: {
+      header: "",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
     header: "1.SIRA",
     text: {
       first: "Google Ads",
-      second: "en düşük bütçe en yüksek verim!",
+      second: {
+        fline: "en düşük bütçe",
+        sline: "en yüksek verim!",
+      },
       third:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
@@ -137,10 +193,20 @@ export default [
   {
     darkMode: false,
     id: "google_business",
+    style: {
+      header: "",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
     header: "KRALSIN",
     text: {
       first: "Google Business Optimizasyonu",
-      second: "bölgenizde öncelik sizin olsun!",
+      second: {
+        fline: "bölgenizde öncelik",
+        sline: "sizin olsun!",
+      },
       third:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
@@ -154,10 +220,20 @@ export default [
   {
     darkMode: true,
     id: "google_business_raporlama",
+    style: {
+      header: "font-size:15vw; opacity:0.05; margin-bottom:6rem; ",
+      textFirst: "color: black;",
+      textSecond: "color: black;",
+      textThird: "color: black;",
+      animContainer: "",
+    },
     header: "DÖNÜŞÜM",
     text: {
       first: "en iyi raporlama",
-      second: "aylık düzenli raporlama dönüşüm takibi",
+      second: {
+        fline: "aylık düzenli raporlama",
+        sline: "dönüşüm takibi",
+      },
       third:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
@@ -170,10 +246,16 @@ export default [
   {
     darkMode: false,
     id: "produksiyon",
-    header: "",
+    style: {
+      header: "opacity:0",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "width:92%",
+    },
+    header: "Perspective",
     text: {
       first: "kaderimizse",
-
       second: "çekeriz :)",
       third:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
@@ -188,7 +270,14 @@ export default [
   {
     darkMode: false,
     id: "profesyonel_ekipman",
-    header: "",
+    style: {
+      header: "opacity:0;",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
+    header: "Technical",
     text: {
       first: "profesyonel ekip",
       second: "güçlü ekipmanlar!",
@@ -205,7 +294,14 @@ export default [
   {
     darkMode: true,
     id: "reklam_yonetimi",
-    header: "",
+    style: {
+      header: "opacity:0;",
+      textFirst: "color: black;",
+      textSecond: "color: black;",
+      textThird: "color: black;",
+      animContainer: "",
+    },
+    header: "Bilgi",
     text: {
       first: "tv ve sinemalar için",
       second: "reklam ve kamu spotu çekimleri",
@@ -222,7 +318,14 @@ export default [
   {
     darkMode: false,
     id: "tanitim_filmi",
-    header: "",
+    style: {
+      header: "opacity:0;",
+      textFirst: "",
+      textSecond: "",
+      textThird: "",
+      animContainer: "",
+    },
+    header: "görsel",
     text: {
       first: "tanıtım filmi",
       second: "",
@@ -239,7 +342,14 @@ export default [
   {
     darkMode: true,
     id: "konsept_fotograf_cekimi",
-    header: "",
+    style: {
+      header: "opacity:0",
+      textFirst: "color: black;",
+      textSecond: "color: black;",
+      textThird: "color: black;",
+      animContainer: "",
+    },
+    header: "Konsept",
     text: {
       first: "ürün & konsept fotoğraf",
       second: "çekimleri ve dekupaj işlemleri",

@@ -3,7 +3,7 @@
     <img
       src="@/assets/images/produksiyon-cameraman.png"
       alt=""
-      class="w-full h-full object-contain"
+      class="object-contain lion"
     />
   </div>
 </template>
